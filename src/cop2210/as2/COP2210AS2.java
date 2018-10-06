@@ -54,7 +54,7 @@ public class COP2210AS2 {
         System.out.println("Starting Size: " + startingSize);
         
         // Creo un objeto de clase BeeFarm
-        BeeFarm beefarm = new BeeFarm(queenName, colonyName, careTakerName, startingSize);
+        BeeFarm gameObj = new BeeFarm(queenName, colonyName, careTakerName, startingSize);
         
         
         // ask the user how many days their colony should be fed
@@ -64,7 +64,7 @@ public class COP2210AS2 {
         }while( tempString.length() == 0);
         System.out.println("Days fed: " + tempString);
         
-        beefarm.feed(Integer.parseInt(tempString));
+        gameObj.feed(Integer.parseInt(tempString));
         
         // ask the user how many days their colony should be fed
         do {
@@ -73,13 +73,13 @@ public class COP2210AS2 {
         }while( tempString.length() == 0);
         System.out.println("Days fed: " + tempString);
         
-        boolean retVal = beefarm.breed(Integer.parseInt(tempString));
+        boolean retVal = gameObj.breed(Integer.parseInt(tempString));
         if (retVal) {
             // puedo hacer el breed
         }else {
             // no pudo hacer el breed
         }
-        System.out.println("Colony size: " + beefarm.numbOfBees);
+        System.out.println("Colony size: " + gameObj.numbOfBees);
         
      }
 }
